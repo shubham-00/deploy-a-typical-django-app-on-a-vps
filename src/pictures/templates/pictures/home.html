@@ -1,0 +1,17 @@
+{% extends "pictures/base.html" %}
+
+<div>
+	{% block content %}
+	<div>
+		{% for picture in picture_list %}
+		<div style="margin-top: 40px">
+			<h4>
+				{{ picture.title }} | <a href="{% url 'pictures:edit' picture.id %}">edit</a> | <a href="{% url 'pictures:delete' picture.id %}">delete</a>
+			</h4>
+			<img src="{{ picture.image.url }}" alt="{{ picture.title }}" style="max-width: 100%" />
+		</div>
+		<hr />
+		{% endfor %}
+	</div>
+	{% endblock content %}
+</div>

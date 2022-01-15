@@ -1,0 +1,7 @@
+<div style="padding: 50px; border: 2px solid gray; display: inline-block">
+	<form method="POST" enctype="multipart/form-data">
+		<legend>{{ title }}</legend>
+		<div class="mb-3">{% csrf_token %} {{ form.as_p }}</div>
+		<button class="btn btn-sm btn-dark" type="SUBMIT">{{ button_text }}</button>
+	</form>
+</div>

@@ -1,0 +1,7 @@
+{% extends "pictures/base.html" %}
+
+<div>
+	{% block content %}
+	<div>{% include "pictures/form.html" with form=form title="Add a new picture" button_text="Add" %}</div>
+	{% endblock content %}
+</div>
