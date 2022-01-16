@@ -84,8 +84,8 @@ else:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
-            "NAME": "DailyImagesDatabase",
-            "USER": "DailyImagesUser",
+            "NAME": "dailyimagesdatabase",
+            "USER": "dailyimagesuser",
             "PASSWORD": "DailyImagesPassword",
             "HOST": "localhost",
             "PORT": "",
