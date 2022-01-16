@@ -73,13 +73,24 @@ WSGI_APPLICATION = "DailyImages.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+if DEBUG:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": "DailyImagesDatabase",
+            "USER": "DailyImagesUser",
+            "PASSWORD": "DailyImagesPassword",
+            "HOST": "localhost",
+            "PORT": "",
+        }
+    }
 
 
 # Password validation
